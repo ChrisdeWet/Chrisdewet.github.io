@@ -1,0 +1,90 @@
+<html lang="en">
+	<head>
+		<style>
+			body {
+			  align-items: center;
+			  color: #333;
+			  display: flex;
+			  font-family: sans-serif;
+			  justify-content: center;
+			  margin: 0;
+			  min-height: 100vh;
+			}
+			h1, ul {
+			  margin-top: 0;
+			}
+			hr {
+			  margin: 2px 0 4px;
+			}
+			.profile_photo {
+			  border-radius: 50%;
+			  height: 350px;
+			  margin-right: 50px;
+			  object-fit: cover;
+			  width: 350px;
+			}
+			.flag {
+				height: 35px;
+				width: 35px;
+				x: 0;
+				y: 0;
+			}
+			section {
+			  align-items: center;
+			  background: linear-gradient(to bottom, #ffffff 40%, #4096ee 60%);
+			  border: 2px solid grey;
+			  box-shadow: 10px 10px 5px rgba(0,0,0,0.3);
+			  display: flex;
+			  padding: 40px;
+			}
+			span {
+			  color: #555;
+			  font-size: 14px;
+			}
+		</style>
+	</head>
+	<body onload="init()">
+  		<img class="profile_photo" src="lacey.jpg" />
+		 <div lang="en" xml:lang="en">
+		    <span id="txtName">Name</span>
+		    <hr />
+		    <h1 translate="no">Lacey</h1>
+		    <span id="txtILiveHere">I live here:</span>
+		    <hr />
+		    <ul>
+		      <li translate="no">Roopa tn 2 - 6 ( appartment 6 )</li>
+		      <li translate="no">Tallinn</li>
+		    </ul>
+		    <span id="txtMyContactsAre">My contacts are:</span>
+		    <hr />
+		    <ul>
+		      <li translate="no">Beanette: +372 5466 8169 ( beanettes@gmail.com )</li>
+		      <li translate="no">Chris: +372 5466 8184 ( chris.dewet@gmail.com )</li>
+		    </ul>
+			<div>
+				<img id="ee" class="flag" src="estonia.png"/>
+				<img id="ru" class="flag" src="russia.png"/>
+				<img id="en" class="flag" src="united-kingdom.png"/>
+			</div>
+		  </div>
+		  <script>
+		  	function init(){
+		  		document.getElementById("ee").addEventListener('click', function (e) {
+    				document.getElementById("txtName").innerHTML = "Nimi";
+    				document.getElementById("txtILiveHere").innerHTML = "Ma elan siin";
+    				document.getElementById("txtMyContactsAre").innerHTML = "Minu kontaktid on:";
+   				});
+		  		document.getElementById("en").addEventListener('click', function (e) {
+    				document.getElementById("txtName").innerHTML = "Name";
+    				document.getElementById("txtILiveHere").innerHTML = "I live here:";
+    				document.getElementById("txtMyContactsAre").innerHTML = "My contacts are:";
+   				});
+   				document.getElementById("ru").addEventListener('click', function (e) {
+    				document.getElementById("txtName").innerHTML = "имя";
+    				document.getElementById("txtILiveHere").innerHTML = "я живу здесь:";
+    				document.getElementById("txtMyContactsAre").innerHTML = "Мои контакты:";
+   				});
+		  	}
+		  </script>
+	</body>
+</html>
